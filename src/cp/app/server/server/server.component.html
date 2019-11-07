@@ -1,0 +1,61 @@
+<div class="row menu-component">
+    <div class="col-sm-12">
+        <mat-card>
+            <mat-card-content>
+                <h4>Actions</h4>
+                <button (click)="restartServer()" [color]="'warn'" mat-flat-button [disabled]="restartServerLoad">Restart Server</button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-sm-12 console">
+        <mat-card>
+
+            <mat-form-field class="white-form-field" [color]="'warn'">
+                <textarea matInput rows="1"></textarea>
+            </mat-form-field>
+            <ng-scrollbar>
+                <mat-card-content>
+                    <div class="content">
+                        <div *ngFor="let message of messages">
+                            <span>{{message.timestamp | date}}</span> | <span>{{message.text}}</span>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </ng-scrollbar>
+        </mat-card>
+    </div>
+    <div class="col-sm-6">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>CPU</mat-card-title>
+                <div class="cart-avatar">
+                    <fa-icon [icon]="icons.cpu"></fa-icon>
+                </div>
+            </mat-card-header>
+            <br>
+            <mat-card-content *ngIf="serverService.systemInfo">
+                <p>{{serverService.systemInfo.cpu.manufacturer}} {{serverService.systemInfo.cpu.brand}}</p>
+                <p>Current Load: {{serverService.systemInfo.currentLoad | percent}}</p>
+                <p>Cores: {{serverService.systemInfo.cpu.cores}} ({{serverService.systemInfo.cpu.physicalCores}})</p>
+                <p>Speed: {{serverService.systemInfo.cpu.speed}} GHz</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-sm-6">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Memory</mat-card-title>
+                <div class="cart-avatar">
+                    <fa-icon [icon]="icons.memory"></fa-icon>
+                </div>
+            </mat-card-header>
+            <br>
+            <mat-card-content *ngIf="serverService.systemInfo">
+                <p>Total: {{serverService.systemInfo.mem.total | number}} GB</p>
+                <p>Free: {{serverService.systemInfo.mem.free | number}} GB</p>
+                <p>Percent: {{serverService.systemInfo.mem.percent | percent}}</p>
+                <p>App Used: {{serverService.systemInfo.mem.appUsed | number}} GB</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

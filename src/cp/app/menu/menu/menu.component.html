@@ -1,0 +1,58 @@
+<div class="row menu-component">
+    <div class="col-sm-3">
+        <mat-card>
+            <mat-card-header matRipple routerLink="/server">
+                <mat-card-title>Server</mat-card-title>
+                <div class="cart-avatar">
+                    <fa-icon [icon]="icons.server"></fa-icon>
+                </div>
+            </mat-card-header>
+            <mat-card-actions>
+                <button [color]="'primary'" routerLink="/server" mat-flat-button>Open</button>
+                <a href="/server" target="_blank"><button mat-flat-button [color]="'accent'" mat-button>External</button></a>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    <div class="col-sm-3">
+        <mat-card>
+            <mat-card-header matRipple routerLink="/users">
+                <mat-card-title>Users</mat-card-title>
+                <div class="cart-avatar">
+                    <fa-icon [icon]="icons.users"></fa-icon>
+                </div>
+            </mat-card-header>
+            <mat-card-actions>
+                <button [color]="'primary'" routerLink="/users" mat-flat-button>Open</button>
+                <a href="/users" target="_blank"><button mat-flat-button [color]="'accent'" mat-button>External</button></a>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    <div class="col-sm-3">
+        <mat-card>
+            <mat-card-header matRipple routerLink="/chat">
+                <mat-card-title>Chat</mat-card-title>
+                <div class="cart-avatar">
+                    <fa-icon [icon]="icons.comments"></fa-icon>
+                </div>
+            </mat-card-header>
+            <mat-card-actions>
+                <button [color]="'primary'" routerLink="/chat" mat-flat-button>Open</button>
+                <a href="/chat" target="_blank"><button mat-flat-button [color]="'accent'" mat-button>External</button></a>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    <div class="col-sm-3">
+        <mat-card>
+            <mat-card-header matRipple routerLink="/settings">
+                <mat-card-title>Settings</mat-card-title>
+                <div class="cart-avatar">
+                    <fa-icon [icon]="icons.sliders"></fa-icon>
+                </div>
+            </mat-card-header>
+            <mat-card-actions>
+                <button [color]="'primary'" routerLink="/settings" mat-flat-button>Open</button>
+                <a href="/settings" target="_blank"><button mat-flat-button [color]="'accent'" mat-button>External</button></a>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

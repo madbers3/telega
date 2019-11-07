@@ -1,0 +1,18 @@
+<mat-card class="card">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Felix</mat-card-title>
+        <mat-card-subtitle>Чат</mat-card-subtitle>
+    </mat-card-header>
+    <form class="example-form" (ngSubmit)="send()" [formGroup]="form">
+        <mat-card-content>
+            <mat-form-field class="example-full-width">
+                <textarea formControlName="text" style="height: 200px;font-size: 16px" matInput placeholder="Сообщение"></textarea>
+            </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-flat-button [color]="'primary'" type='submit' [disabled]="loading">Отправить</button>
+            <button mat-button [color]="'primary'" (click)="form.reset(); this.loading = false">Отчистить</button>
+        </mat-card-actions>
+    </form>
+</mat-card>

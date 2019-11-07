@@ -1,0 +1,14 @@
+.cart-avatar {
+  font-size: 41px;
+  float: right;
+  margin: auto;
+}
+mat-card-actions {
+  button {
+    margin-right: 5px;
+  }
+}
+.mat-card-header {
+  cursor: pointer;
+  user-select: none;
+}

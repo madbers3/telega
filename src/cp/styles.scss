@@ -1,0 +1,54 @@
+$fa-font-path: '~font-awesome/fonts';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "scss/colors";
+@import "~bootstrap/scss/bootstrap-grid";
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $color-pale-silver;
+}
+
+.menu-component {
+  .mat-card-header .mat-card-header-text {
+    float: left;
+    margin: auto;
+    font-size: 42px;
+    margin-top: 12px;
+  }
+  .ng-scroll-content {
+    height: 380px;
+  }
+  .ng-scrollbar {
+    --scrollbar-thumb-color: white;
+  }
+}
+
+.white-form-field {
+  .mat-form-field-appearance-legacy .mat-form-field-underline,
+  .mat-form-field-appearance-legacy .mat-form-field-ripple,
+  .mat-form-field-appearance-legacy.mat-focused,
+  .mat-form-field-underline,
+  .mat-form-field-appearance-legacy.mat-focused,
+  .mat-form-field-ripple {
+    background-color: white;
+  }
+
+  /** Overrides label color **/
+  .mat-form-field-appearance-legacy .mat-form-field-label,
+  .mat-form-field-appearance-legacy.mat-focused,
+  .mat-form-field-label {
+    color: white;
+  }
+
+  /** Overrides caret & text color **/
+  .mat-form-field-appearance-legacy .mat-input-element {
+    caret-color: white;
+    color: white;
+  }
+
+  color: white;
+}

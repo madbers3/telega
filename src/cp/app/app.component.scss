@@ -1,0 +1,18 @@
+@import "../scss/colors";
+
+.header {
+  background: $color-wine-dregs;
+  text-align: center;
+  text-transform: uppercase;
+  button {
+    margin: 0;
+    padding-top: 0.67em;
+    padding-bottom: 0.67em;
+    color: white;
+    font-size: 2rem;
+  }
+}
+
+.container {
+  margin-top: 16px;
+}

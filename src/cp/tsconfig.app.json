@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../frontend/app",
+    "module": "esnext",
+    "target": "es2015",
+    "downlevelIteration": true,
+    "types": []
+  },
+  "include": [
+    "*"
+  ],
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts"
+  ]
+}
