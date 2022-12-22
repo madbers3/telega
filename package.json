@@ -91,7 +91,7 @@
     "executive": "^1.6.3",
     "express": "^4.17.1",
     "google-it": "^1.2.1",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^5.7.5",
     "nodemailer": "^6.3.1",
     "password-hash": "^1.2.2",
